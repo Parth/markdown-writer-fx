@@ -1,0 +1,50 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.7'
+}
+
+javafx {
+    version = "11.0.2"
+    modules = ['javafx.graphics', 'javafx.controls', 'javafx.web']
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.eclipse.jgit:org.eclipse.jgit:4.5.0.201609210915-r'
+    implementation 'org.scala-lang:scala-library:2.12.8'
+    compile group: 'org.fxmisc.richtext', name: 'richtextfx', version: '0.10.0'
+	compile "com.miglayout:miglayout-javafx:5.2" 
+	compile "org.fxmisc.cssfx:cssfx:1.0.0" 
+	compile "org.apache.commons:commons-lang3:3.8.1" 
+	compile "com.esotericsoftware.yamlbeans:yamlbeans:1.13" 
+	compile "com.vladsch.flexmark:flexmark:0.35.0" 
+	compile "com.vladsch.flexmark:flexmark-ext-abbreviation:0.35.0" 
+	compile "com.vladsch.flexmark:flexmark-ext-anchorlink:0.35.0" 
+	compile "com.vladsch.flexmark:flexmark-ext-aside:0.35.0" 
+	compile "com.vladsch.flexmark:flexmark-ext-autolink:0.35.0" 
+	compile "com.vladsch.flexmark:flexmark-ext-definition:0.35.0" 
+	compile "com.vladsch.flexmark:flexmark-ext-footnotes:0.35.0" 
+	compile "com.vladsch.flexmark:flexmark-ext-gfm-strikethrough:0.35.0" 
+	compile "com.vladsch.flexmark:flexmark-ext-gfm-tasklist:0.35.0" 
+	compile "com.vladsch.flexmark:flexmark-ext-tables:0.35.0" 
+	compile "com.vladsch.flexmark:flexmark-ext-toc:0.35.0" 
+	compile "com.vladsch.flexmark:flexmark-ext-wikilink:0.35.0" 
+	compile "com.vladsch.flexmark:flexmark-ext-yaml-front-matter:0.35.0" 
+	compile "com.atlassian.commonmark:commonmark:0.12.1" 
+	compile "com.atlassian.commonmark:commonmark-ext-autolink:0.12.1" 
+	compile "com.atlassian.commonmark:commonmark-ext-gfm-strikethrough:0.12.1" 
+	compile "com.atlassian.commonmark:commonmark-ext-gfm-tables:0.12.1" 
+	compile "com.atlassian.commonmark:commonmark-ext-heading-anchor:0.12.1" 
+	compile "com.atlassian.commonmark:commonmark-ext-ins:0.12.1" 
+	compile "com.atlassian.commonmark:commonmark-ext-yaml-front-matter:0.12.1" 
+	compile group: 'org.controlsfx', name: 'controlsfx', version: '11.0.0'
+	compile "de.jensd:fontawesomefx-fontawesome:4.7.0-9.1.2" 
+	testCompile "junit:junit:4.12" 
+}
+
+applicationDefaultJvmArgs = ["--add-opens=javafx.graphics/javafx.scene=org.controlsfx.controls"]
+mainClassName = 'org.markdownwriterfx.MarkdownWriterFXApp'
